@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<style>
+br{
+	line-height:30px;
+}
+#button input{
+	width:10em;
+	margin-right:5px;
+}
+
+body{
+	width:1360px;
+	background-image:url("http://www.desktopwallpaperhd.net/wallpapers/6/6/persona-cartoon-wallpapers-content-gallery-66534.jpg");
+	background-size:cover;
+}
+form{
+	background-color:rgba(63,240,255,0.30);
+	margin:auto;
+	width:60%;
+	color:#011BE5;
+	padding:20px;
+}
+h1{
+	background:url("logo.png") top center no-repeat;
+	height: 150px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+</style>
+<meta charset="utf-8">
+<title>lab3</title>
+</head>
+
+<body>
+	<h1>Personal Information</h1>
+	<div id="form">
+    	<form name="myForm" method="post" onSubmit="myValidate();">
+        	Firstname: <input type="text" id="Fname" ><br>
+            Lastname: <input type="text" id="Lname" ><br>
+       	  <fieldset>
+            	<legend>&nbsp;Address&nbsp;</legend>
+                	House number:<input type="text" id="house">
+                    &emsp;Street:<input type="text" id="street"><br>
+                    City: <input type="text" id="city">
+                    &emsp;Province:<input type="text" id="province"><br>
+                    Zipcode:<input type="text" id="zip">
+            </fieldset><br>
+        	Phone number: <input type="tel" id="phone" placeholder="+662-xxx-xxx"><br>
+            Cell phone number: <input type="tel" id="cell" placeholder="+66xx-xxx-xxxx"><br>
+            Birthday:<input type="date" max="2017-12-31" id="birth" onChange="onSelectedDate()" ><br>
+            Citizenship number:<input type="text" maxlength="13" id="Cnum" ><br>
+            Zodiac Sign: <select id="Zsign" onChange="onSelectedItem(this.id,this.selectedIndex)">
+            			  	<option value="aries">Aries</option>
+                            <option value="taurus">Taurus</option>
+                            <option value="gemini">Gemini</option>
+                            <option value="cancer">Cancer</option>
+                            <option value="leo">Leo</option>
+                            <option value="virgo">Virgo</option>
+                            <option value="libra">Libra</option>
+                            <option value="scorpio">Scorpio</option>
+                            <option value="sagittarius">Sagittarius</option>
+                            <option value="capricorn">Capricorn</option>
+                            <option value="aquarius">Aquarius</option>
+                            <option value="pisces">Pisces</option>
+            			 </select><br>
+            Zodiac Year: <select id="Zyear" onChange="onSelectedItem(this.id,this.selectedIndex)">
+            			  	<option value="ram">The Ram</option>
+                            <option value="bull">The Bull</option>
+                            <option value="twins">The Twins</option>
+                            <option value="crab">The Crab</option>
+                            <option value="lion">The Lion</option>
+                            <option value="maiden">The Maiden</option>
+                            <option value="scales">The Scales</option>
+                            <option value="scorpion">The Scorpion</option>
+                            <option value="archer">The Archer</option>
+                            <option value="mountain Sea-goat">The Mountain Sea-goat</option>
+                            <option value="water-bearer">The Water-bearer</option>
+                            <option value="fish">The Fish</option>
+            			 </select><br>
+            Birth Day of Week: <select id="day">
+            			  	<option value="sunday">Sunday</option>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+            			 </select><br>
+            <div id="button">
+            	<input type="button" value="Save" onClick="saveForm()" id="save">
+                <input type="reset" value="Cancel" id="cancel">
+                <input type="submit" value="Submit" id="submit">
+            </div>
+    
+    	</form>
+    </div>
+<script src="myScript.js"></script>
+</body>
+</html>
